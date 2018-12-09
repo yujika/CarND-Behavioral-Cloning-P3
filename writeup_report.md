@@ -27,6 +27,7 @@ The goals / steps of this project are the following:
 [image7]: ./center_2016_12_01_13_31_12_937_flipped.jpg "Flipped Image"
 [image8]: ./cnn-architecture-624x890.png "DAVE-2 Image"
 [image9]: ./mse_graph.png "Without dropout"
+[image10]: ./mse_graph_w_dropout.png "with dropout"
 
 
 ## Rubric Points
@@ -91,6 +92,7 @@ I used a combination of center , left image and right image.
 - In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. 
 - To combat the overfitting, I added three dropout layers. 
     ![over fitting ][image9]
+    ![after adding drop out][image10]
 - At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
 #### 2. Final Model Architecture
@@ -165,5 +167,7 @@ After the collection process, I had 8106 number of data points. I then preproces
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. 
-The ideal number of epochs was Z as evidenced by ...
+The ideal number of epochs was 4 as evidenced by dropping validation loss.
+    ![after adding drop out][image10]
+
 I used an adam optimizer so that manually training the learning rate wasn't necessary.
