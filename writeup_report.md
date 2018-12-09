@@ -27,7 +27,7 @@ The goals / steps of this project are the following:
 [image7]: ./center_2016_12_01_13_31_12_937_flipped.jpg "Flipped Image"
 [image8]: ./cnn-architecture-624x890.png "DAVE-2 Image"
 [image9]: ./mse_graph.png "Without dropout"
-[image10]: ./mse_graph_with_dropout.png "with dropout"
+[image10]: ./mse_graph_with_dropout.png "with
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -99,7 +99,6 @@ I used a combination of center , left image and right image.
 The final model architecture (model.py lines 111-126) consisted of a convolution neural network with the following layers and layer sizes translated from NVIDIA DAVE-2 CNN.
 Dropout (with p=0.5) was used on each of the fully connected (dense) layers before the output.
 I would like to try inserting dropout between Conv2D in future.
-
             _________________________________________________________________
             Layer (type)                 Output Shape              Param #   
             =================================================================
