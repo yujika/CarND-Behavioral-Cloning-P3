@@ -82,6 +82,7 @@ The model used an adam optimizer, so the learning rate was not tuned manually (m
 
 Training data was chosen to keep the vehicle driving on the road.
 I used a combination of center , left image and right image.
+Flipped image is also used.
 
 ### Model Architecture and Training Strategy
 
@@ -174,5 +175,12 @@ The ideal number of epochs was 4 as evidenced by dropping validation loss.
 
 I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
-If I have more time, I would like to try L2 regularization or Batch Normalization.
-For example like this one : https://medium.com/@peter.skvarenina/self-driving-car-using-deep-learning-e796d39edf5c
+I thought that dropout doesn't work in this project for overcome overfitting.
+I tried the following model also, but still overfitting.
+https://medium.com/@peter.skvarenina/self-driving-car-using-deep-learning-e796d39edf5c
+
+Majority of my training data is from sample data provided by Udacity.
+It seems that I needed to record more data by myself to overcome overfitting.
+But I was able to record only around 100 lines with driving simulator on my local machine.
+I should have resolved this first and produce more data by myself.
+
