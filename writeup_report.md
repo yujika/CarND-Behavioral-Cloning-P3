@@ -28,6 +28,7 @@ The goals / steps of this project are the following:
 [image8]: ./cnn-architecture-624x890.png "DAVE-2 Image"
 [image9]: ./mse_graph.png "Without dropout"
 [image10]: ./mse_graph_w_dropout.png "with dropout"
+[image11]: ./mse_graph_w_dropout_epoch4.png "with dropout epoch4"
 
 
 ## Rubric Points
@@ -90,9 +91,10 @@ I used a combination of center , left image and right image.
   It worked correctly and can control almost appropriately, but it goes off the road if I run it through night ( 12 Hour long run ).
 - Implemented DAVE-2 CNN.
 - In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. 
-- To combat the overfitting, I added three dropout layers. 
+- To combat the overfitting, I added three dropout layers. But there was only little difference.
     ![over fitting ][image9]
-    ![after adding drop out][image10]
+    ![after adding drop out][image11]
+
 - At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
 #### 2. Final Model Architecture
@@ -171,3 +173,6 @@ The ideal number of epochs was 4 as evidenced by dropping validation loss.
     ![after adding drop out][image10]
 
 I used an adam optimizer so that manually training the learning rate wasn't necessary.
+
+If I have more time, I would like to try L2 regularization or Batch Normalization.
+For example like this one : https://medium.com/@peter.skvarenina/self-driving-car-using-deep-learning-e796d39edf5c
